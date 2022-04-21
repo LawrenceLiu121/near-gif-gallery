@@ -6,6 +6,7 @@ import { login, logout } from "./utils";
 import "./App.css";
 
 import getConfig from "./config";
+window.Buffer = window.Buffer || require("buffer").Buffer;
 
 // Constants
 const TWITTER_HANDLE = "Lawrence_Liu";
@@ -97,9 +98,6 @@ const App = () => {
 
   const renderConnectedContainer = () => (
     <div className="connected-container">
-      {/* <button className="cta-button connect-wallet-button" onClick={logout}>
-        Sign Out
-      </button> */}
       <form
         onSubmit={(event) => {
           event.preventDefault();
